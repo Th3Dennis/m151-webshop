@@ -2,10 +2,10 @@
 
 function db_connect()
 {
-    $db_host = '51.15.13.170';
-    $db_name = 'chillihero_120';
-    $db_user = 'chillihero_120';
-    $db_pass = 'L13s8Zxj2JKH';
+    $db_host = '34.65.211.44';
+    $db_name = '';
+    $db_user = 'hallo123';
+    $db_pass = 'root';
 
 
     $conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
