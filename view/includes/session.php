@@ -8,6 +8,3 @@ if (isset($_SESSION['loggedIn'])) {
 } else{
     header("Location: ./login.php");
 }
-
-
-?>
