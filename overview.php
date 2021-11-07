@@ -1,4 +1,3 @@
-
 <?php require "./view/includes/session.php" ?>
 <html>
 <?php require "./view/includes/head.php" ?>
