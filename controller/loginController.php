@@ -19,7 +19,7 @@ if (isset($email) && isset($password)){
     if (verifyLogin($email, $password)){
         $_SESSION['email'] = $email;
         $_SESSION['loggedIn'] = true;
-        header("Location: ../Overview.php");
+        header("Location: ../overview.php");
     } else{
         $_SESSION['errorMessage'] = "E-Mail oder Passwort falsch.";
         header("Location: ../login.php");
