@@ -4,7 +4,7 @@
 <body>
     <?php require "./view/includes/navbarLogin.php" ?>
     <?php require "./view/includes/footer.php" ?>
-    <?php require "./view/includes/overviewComponent.php" ?>
+    <h2>You need to login</h2>
 
 </body>
 

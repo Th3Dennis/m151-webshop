@@ -8,9 +8,9 @@ if(file_exists("../model/Database.php")){
 function getProducts()
 {
 
-    $conn = db_connect();
+    $conn = db_connect2();
 
-    $sql = "SELECT * FROM job";
+    $sql = "SELECT * FROM product";
 
     $result = $conn->query($sql) ->fetch_all(MYSQLI_ASSOC);
 
@@ -19,7 +19,7 @@ function getProducts()
 
 function verifyLogin($email, $password)
 {
-    $conn = db_connect();
+    $conn = db_connect1();
     $sql = 'SELECT * from user';
 
     $result = $conn->query($sql);
@@ -41,7 +41,7 @@ function verifyLogin($email, $password)
 
 function register($email, $password)
 {
-    $conn = db_connect();
+    $conn = db_connect1();
     $sql = 'SELECT * from user';
 
 
@@ -82,7 +82,7 @@ function register($email, $password)
 
 function getProductById($id)
 {
-    $conn = db_connect();
+    $conn = db_connect1();
     $sql = "SELECT * from job where id = $id";
 
     $stmt = mysqli_prepare($conn, $sql);
@@ -95,7 +95,7 @@ function getProductById($id)
 
 function acceptJob($jobId, $userEmail){
 
-    $conn = db_connect();
+    $conn = db_connect1();
     $sql = "UPDATE job SET jobAceptor=$userEmail WHERE id=$jobId";
 
     $stmt = mysqli_prepare($conn, $sql);

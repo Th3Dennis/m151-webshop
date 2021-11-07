@@ -12,10 +12,8 @@ if (
         if (register($_REQUEST['email'], $_REQUEST['password'])) {
             $_SESSION['email'] = $_REQUEST['email'];
             $_SESSION['errorMessage'] = '';
-            header('Location: ../Login.php');
-        } else {
-            header('Location: ../Login.php');
         }
+        header('Location: ../Overview.php');
     } else {
         $_SESSION['errorMessage'] = 'Passwörter stimmen nicht überein';
         header('Location: ../Register.php?email=' . $_REQUEST['email']);
