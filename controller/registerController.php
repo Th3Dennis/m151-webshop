@@ -13,7 +13,7 @@ if (
             $_SESSION['email'] = $_REQUEST['email'];
             $_SESSION['errorMessage'] = '';
         }
-        header('Location: ../Overview.php');
+        header('Location: ../overview.php');
     } else {
         $_SESSION['errorMessage'] = 'Passwörter stimmen nicht überein';
         header('Location: ../Register.php?email=' . $_REQUEST['email']);
