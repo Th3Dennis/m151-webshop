@@ -8,7 +8,7 @@
 
 
 <div class="container my-5">
-    <form class="row g-3">
+    <form class="row g-3" action="payment.php">
         <div class="col-md-6">
             <label for="validationServer01" class="form-label">First name</label>
             <input type="text" class="form-control " id="validationServer01" name="firstname" required>
