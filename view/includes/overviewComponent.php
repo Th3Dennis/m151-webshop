@@ -1,12 +1,12 @@
 <?php
 require "./controller/DatabaseController.php";
-
 $products = getProducts();
 
 ?>
 
-<div class="container mt-5">
+<div class="container my-5">
     <p class="alert-danger">Note! Our products are highly limited and can only be bought once per costumer.</p>
+    <p class="alert-danger"><?php if(isset($_SESSION['message'])){echo $_SESSION['message'];} $_SESSION['message'] = "" ?></p>
     <div class="row row-cols-1 row-cols-md-3 g-4">
 
 
@@ -24,11 +24,11 @@ $products = getProducts();
                     </div>
                     <div class="card-footer">
                         <form method="post" action="./controller/addToCart.php">
-                            <input type="hidden" name="id" id="id" value=<?= $product['id']?> >
-                            <input type="hidden" name="price" id="price" value=<?= $product['price_chf']?> >
-                            <input type="hidden" name="description" id="description" value=<?= $product['description']?> >
-                            <input type="hidden" name="path" id="path" value=<?= $product['path']?> >
-                            <input type="hidden" name="name" id="name" value=<?= $product['name']?> >
+                            <input type="hidden" name="id" id="id" value="<?= htmlspecialchars($product['id'])?>" >
+                            <input type="hidden" name="price" id="price" value="<?= htmlspecialchars($product['price_chf'])?>" >
+                            <input type="hidden" name="description" id="description" value="<?= htmlspecialchars($product['description'])?>" >
+                            <input type="hidden" name="path" id="path" value="<?= htmlspecialchars($product['path'])?>" >
+                            <input type="hidden" name="name" id="name" value="<?= htmlspecialchars($product['name'])?>">
                             <button id="addItem" class="btn btn-success">Add to cart</button>
                         </form>
                     </div>

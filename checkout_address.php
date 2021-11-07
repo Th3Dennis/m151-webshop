@@ -7,7 +7,7 @@
 <?php require "./view/includes/navbarLogout.php" ?>
 
 
-<div class="container mt-5">
+<div class="container my-5">
     <form class="row g-3">
         <div class="col-md-6">
             <label for="validationServer01" class="form-label">First name</label>
@@ -17,7 +17,6 @@
         <div class="col-md-6">
             <label for="validationServer02" class="form-label">Last name</label>
             <input type="text" class="form-control " id="validationServer02" name="lastname" required>
-
         </div>
 
         <div class="col-md-12">
@@ -50,16 +49,6 @@
         </div>
     </form>
 </div>
-
-
-
-
-
-
-
-
-
-
 
 
 <?php require "./view/includes/footer.php" ?>

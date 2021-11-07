@@ -1,10 +1,20 @@
 <?php
+session_start();
 
 
-if (isset($_SESSION['cart'])){
+if (!isset($_SESSION['cart'])){
     $_SESSION['cart'] = array();
 }
 
-$_SESSION['cart'][] = $_REQUEST;
 
-header("Location: ");
+if(!in_array($_REQUEST, $_SESSION['cart'])){
+    array_push($_SESSION['cart'], $_REQUEST);
+    $_SESSION['message'] = 'Product added to cart';
+}
+else{
+    $_SESSION['message'] = 'Product already in cart';
+}
+
+header("Location: ../overview.php");
+
+?>
