@@ -12,14 +12,14 @@ $products = getProducts();
         <?php foreach ($products as $product) : ?>
 
             <div class="col">
-                <div class="card">
+                <div class="card ms-2 me-2">
                     <img src=<?= $product['path']?> class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title"><?= $product['name']?></h5>
                         <h4><?= $product['price_chf'] . ".-"?> </h4>
                         <p class="card-text"><?= $product['description']?></p>
                     </div>
-                    <div class="card-footer">
+                    <div class="card-footer h-100">
                         <form method="post" action="./controller/addToCart.php">
                             <input type="hidden" name="id" id="id" value="<?= htmlspecialchars($product['id'])?>" >
                             <input type="hidden" name="price" id="price" value="<?= htmlspecialchars($product['price_chf'])?>" >
