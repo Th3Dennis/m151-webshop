@@ -1,5 +1,5 @@
-<html>
 <?php require "./view/includes/session.php" ?>
+<html>
 <?php require "./view/includes/head.php" ?>
 
 
@@ -18,7 +18,7 @@
         <div class="col"></div>
     </div>
 
-    <form class="row g-3">
+    <form class="row g-3" action="./overview.php">
         <div class="col"></div>
         <input type="hidden" value="<?= $_REQUEST['firstname'] ?>">
         <div class="col">

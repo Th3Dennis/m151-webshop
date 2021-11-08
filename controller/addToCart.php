@@ -1,5 +1,7 @@
 <?php
-session_start();
+if(session_status() === 1){
+    session_start();
+}
 
 
 if (!isset($_SESSION['cart'])){

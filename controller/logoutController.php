@@ -1,5 +1,7 @@
-<?php 
-session_start();
+<?php
+if(session_status() === 1){
+    session_start();
+}
 
 //Include logic here
 
