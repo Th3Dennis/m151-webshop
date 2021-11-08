@@ -5,14 +5,11 @@ if(session_status() === 1){
 $email = $_REQUEST['email'];
 $password = $_REQUEST['password'];
 
-
-
 require "DatabaseController.php";
 
 $html_Output = null;
 
 $_SESSION['errorMessage'] = "";
-
 
 // Prüfe Inhalt von Eingabe  
 if (isset($email) && isset($password)){

@@ -5,12 +5,9 @@ $products = getProducts();
 ?>
 
 <div class="container my-5">
-    <p class="alert-danger">Note! Our products are highly limited and can only be bought once per costumer.</p>
-    <p class="alert-danger"><?php if(isset($_SESSION['message'])){echo $_SESSION['message'];} $_SESSION['message'] = "" ?></p>
+    <p class=" alert-danger">Note! Our products are highly limited and can only be bought once per customer.</p>
+    <p class="alert-info"><?php if(isset($_SESSION['message'])){echo $_SESSION['message'];} $_SESSION['message'] = "" ?></p>
     <div class="row row-cols-1 row-cols-md-3 g-4">
-
-
-
 
         <?php foreach ($products as $product) : ?>
 

@@ -3,10 +3,8 @@ if(session_status() === 1){
     session_start();
 }
 
-//Include logic here
-
-
 $_SESSION['loggedIn'] = false;
+unset($_SESSION['email']);
 
 header("Location: ../index.php");
 

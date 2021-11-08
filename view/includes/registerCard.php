@@ -14,7 +14,11 @@ if (isset($_REQUEST['email'])) {
                 <div class="row justify-content-center">
                     <div class="col-xl-5 col-md-8">
                         <form class="bg-white  rounded-5 shadow-5-strong p-5" action="./controller/registerController.php" method="post">
+
+
+                            <p class="alert-danger"><?=isset($_SESSION['errorMessage']) ? htmlspecialchars($_SESSION['errorMessage']) : ''?></p>
                             <legend>Register</legend>
+
                             <!-- Email input -->
                             <div class="form-outline mb-4">
                                 <input type="email" id="EmailField" class="form-control" name="email" value="<?= htmlspecialchars(

@@ -49,6 +49,9 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <form action="./controller/deleteCart.php" class="modal-title ms-5">
+                    <button id="deleteItem" class="btn btn-outline-danger">Delete Cart</button>
+                </form>
                 <form action="./checkout_address.php">
                     <button id="addItem" class="btn btn-success">Checkout</button>
                 </form>
